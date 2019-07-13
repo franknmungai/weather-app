@@ -1,0 +1,43 @@
+body {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;  /*Set the font of all our text in body*/
+    max-width: 650px;   /*Constrain our content to a particular location*/
+    margin: 0 auto;   /*Evenly distribute space on the left and right of the body (auto) ans 0 space at the top*/
+    padding: 0 16px;
+
+    /* Enabling Flex box */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /*To get the full view height*/
+}
+
+.main-content {
+    flex-grow: 1;   /*The main content should take all left over space.*/
+}
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16x;
+    margin-bottom: 48px
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+
+}
+
+.portrait {
+    width: 300;
+}
