@@ -9,7 +9,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
 
     //making our http get request
-    fetch(`http://localhost:3000/weather?address=${location}`)  //fetching data from our json end point. (remember our weather route handler returns json so we are fetching it.)
+    fetch(`/weather?address=${location}`)  //fetching data from our json end point. (remember our weather route handler returns json so we are fetching it.)
     .then((response) => {
         return response.json()  //return the parsed json as the response
     })
