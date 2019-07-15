@@ -8,7 +8,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
-    //making our http get request
+    //making our http get request (to the json end point)
     fetch(`/weather?address=${location}`)  //fetching data from our json end point. (remember our weather route handler returns json so we are fetching it.)
     .then((response) => {
         return response.json()  //return the parsed json as the response

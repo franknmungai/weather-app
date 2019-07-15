@@ -29,6 +29,7 @@ app.get('', (req, res) => {
     })
     pageVisits++
     console.log(pageVisits)
+
 })
 
 app.get('/about', (req, res) => {

@@ -10,7 +10,7 @@ const forecast = (lat, lon, callback) => { //arguments expected: An object with 
             callback('Unable to find location', undefined);
         }else{
             const {daily, currently } = body  //destructuring the object body with our weather data. 
-            callback(undefined, ` ${daily.data[0].summary} It is ${currently.temperature} degrees, and there is ${daily.data[0].precipProbability} chance of rain`
+            callback(undefined, ` ${daily.data[0].summary} It is ${currently.temperature} degrees, and there is ${daily.data[0].precipProbability} chance of rain. Humidity is at ${daily.data[0].humidity}. Highest temparature today is ${daily.data[0].temperatureHigh}. Today's lowest temparature is ${daily.data[0].temperatureLow}`
             );
         }    
     })

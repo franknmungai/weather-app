@@ -1,4 +1,5 @@
 body {
+    background: #E4F0F4;
     color: #333333;
     font-family: Arial, Helvetica, sans-serif;  /*Set the font of all our text in body*/
     max-width: 650px;   /*Constrain our content to a particular location*/
@@ -39,7 +40,8 @@ header a {
 }
 
 .portrait {
-    width: 300;
+    width: 40%;
+    height: 60%;
 }
 
 input {
