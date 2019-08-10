@@ -23,7 +23,7 @@ hbs.registerPartials(partialsPath)  //registerPartials() takes in a path to wher
 let pageVisits = 0
 //Creating a handler for a http get request. we use res.render to render a view
 app.get('', (req, res) => {
-    res.render('index', {   //the object contains dynamic values to be referenced in our hbs file
+    res.render('index', {   //the object contains dynamic values to be referenced in our hbs file --> partials
         title: 'Weather ',
         name: 'Frank'
     })
@@ -122,7 +122,17 @@ app.get('/weather', (req, res) => {
     })
 })
 
-
+app.get('/my-weather', (req, res) => {
+    const lat = req.query.lat
+    const lon = req.query.lon
+    forecast(lat, lon, (error, weatherForecast) => {
+        if (error){
+            return res.send({error})
+        }
+        res.send({weatherForecast})
+        console.log(weatherForecast)
+    })
+})
 //for a route that is not specified within /help
 app.get('/help/*', (req, res) => {
     res.render('404-page', {    //the object paramters contains the dynamic value to be reference on our hbs 404 file
